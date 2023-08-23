@@ -3,7 +3,7 @@ import requests
 
 repo_owner = "Fndroid"
 repo_name = "clash_for_windows_pkg"
-download_directory = "/root/data/本地存储/科学上网/Clash"
+download_directory = "D:\GitHub\py下载指定仓库最新文件\ces"
 
 def get_latest_release_download_urls():
     url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/releases/latest"
@@ -15,7 +15,7 @@ def get_latest_release_download_urls():
             download_urls = []
             for asset in assets:
                 download_url = asset.get("browser_download_url")
-                if download_url.endswith(".exe"):
+                if download_url.endswith("win.7z") or download_url.endswith(".exe"):
                     download_urls.append(download_url)
             return download_urls
     return None
