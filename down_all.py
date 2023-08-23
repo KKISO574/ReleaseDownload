@@ -13,7 +13,7 @@ def get_latest_release_download_urls():
             download_urls = []
             for asset in assets:
                 download_url = asset.get("browser_download_url")
-                if download_url.endswith(".exe"):
+                if download_url.endswith("win.7z") or download_url.endswith(".exe"):
                     download_urls.append(download_url)
             return download_urls
     return None
