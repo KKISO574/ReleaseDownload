@@ -3,7 +3,7 @@ import requests
 
 repo_owner = "Fndroid"
 repo_name = "clash_for_windows_pkg"
-download_directory = "D:\GitHub\py下载指定仓库最新文件\ces"
+download_directory = "/root/data/本地存储/科学上网/Clash"
 
 def get_latest_release_download_urls():
     url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/releases/latest"
